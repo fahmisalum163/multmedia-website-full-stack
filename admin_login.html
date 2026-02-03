@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login - Food Ordering System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Admin Login Section -->
+  <section class="login admin-login">
+    <h2>Admin Login</h2>
+    <form id="adminLoginForm" method="POST" action="admin_login.php" onsubmit="return validateAdminLogin()">
+      <label>Username:</label>
+      <input type="text" id="adminUsername" name="username" required>
+
+      <label>Password:</label>
+      <input type="password" id="adminPassword" name="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+    <p id="adminError" style="color:red;"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
