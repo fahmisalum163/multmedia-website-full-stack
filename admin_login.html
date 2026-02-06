@@ -6,21 +6,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Customer Login</a></li>
+    </ul>
+  </nav>
+
   <!-- Admin Login Section -->
   <section class="login admin-login">
     <h2>Admin Login</h2>
-    <form id="adminLoginForm" method="POST" action="admin_login.php" onsubmit="return validateAdminLogin()">
+    <form method="POST" action="admin_login.php">
       <label>Username:</label>
-      <input type="text" id="adminUsername" name="username" required>
+      <input type="text" name="username" required>
 
       <label>Password:</label>
-      <input type="password" id="adminPassword" name="password" required>
+      <input type="password" name="password" required>
 
       <button type="submit">Login</button>
     </form>
     <p id="adminError" style="color:red;"></p>
   </section>
-
-  <script src="script.js"></script>
 </body>
 </html>
