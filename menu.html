@@ -2,140 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Menu - Food Ordering System</title>
+  <title>Menu - DelishHub</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Navigation -->
   <nav class="navbar">
+    <div class="logo">🍴 DelishHub</div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="menu.html">Menu</a></li>
-      <li><a href="cart.html">Cart</a></li>
+      <li><a href="backend/cart.php">Cart</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="register.html">Register</a></li>
       <li><a href="login.html">Login</a></li>
     </ul>
   </nav>
 
-  <!-- Menu Section -->
   <section class="menu">
     <h2>Our Menu</h2>
-
-    <!-- Categories -->
-    <div class="menu-category">
-      <h3>Burgers 🍔</h3>
-      <div class="food-item" data-id="1" data-name="Cheese Burger" data-price="6">
-        <img src="images/cheeseburger.jpg" alt="Cheese Burger">
-        <h4>Cheese Burger</h4>
-        <p>Tsh 12000</p>
-        <p>⭐⭐⭐⭐⭐ (200 reviews)</p>
-        <button onclick="addToCart(this)">Add to Cart</button>
-      </div>
-      <div class="food-item" data-id="2" data-name="chicken burger" data-price="6">
-        <img src="images/chicken burger.jpg" alt="chicken burger">
-        <h4>Cheese Burger</h4>
-        <p>$6</p>
-        <p>⭐⭐⭐⭐⭐ (200 reviews)</p>
-        <button onclick="addToCart(this)">Add to Cart</button>
-      </div>
-
-      <div class="food-item" data-id="3" data-name="bacon burger" data-price="6">
-        <img src="images/bacon burger.jpg" alt="bacon burger">
-        <h4>Bacon burger</h4>
-        <p>Tsh 15000</p>
-        <p>⭐⭐⭐⭐⭐ (200 reviews)</p>
-        <button onclick="addToCart(this)">Add to Cart</button>
-      </div>
-
-      <div class="food-item" data-id="2" data-name="beef burger" data-price="6">
-        <img src="images/beef burger.jpg" alt="beef burger">
-        <h4>Beef burger</h4>
-        <p>Tsh 17000</p>
-        <p>⭐⭐⭐⭐⭐ (200 reviews)</p>
-        <button onclick="addToCart(this)">Add to Cart</button>
-      </div>
-    </div>
-
-    <div class="menu-category">
-      <h3>Pizzas 🍕</h3>
-      <div class="food-item" data-id="3" data-name="Margherita Pizza" data-price="8">
+    <div class="menu-grid">
+      <div class="menu-item">
         <img src="images/pizza.jpg" alt="Pizza">
-        <h4>Veggie  Pizza</h4>
-        <p>Tsh 18000</p>
-        <p>⭐⭐⭐⭐☆ (150 reviews)</p>
-        <button onclick="addToCart(this)">Add to Cart</button>
+        <h3>Pizza</h3>
+        <p>Tsh 1500</p>
+        <button onclick="addToCart('Pizza')">Add to Cart</button>
       </div>
-      <div class="food-item" data-id="4" data-name="BBQ Pizza" data-price="9">
-        <img src="images/BBQ.jpg" alt="BBQ Pizza">
-        <h4>Pepperoni Pizza</h4>
-        <p>Tsh 15000</p>
-        <p>⭐⭐⭐⭐⭐ (300 reviews)</p>
-        <button onclick="addToCart(this)">Add to Cart</button>
+      <div class="menu-item">
+        <img src="images/burger.jpg" alt="Burger">
+        <h3>Burger</h3>
+        <p>Tsh 17000</p>
+        <button onclick="addToCart('Burger')">Add to Cart</button>
       </div>
-
-      <div class="food-item" data-id="4" data-name="hawaiian Pizza" data-price="9">
-        <img src="images/hawaiian.jpg" alt="hawaiian Pizza">
-        <h4>Hawaiian Pizza</h4>
-        <p>Tsh 25000</p>
-        <p>⭐⭐⭐⭐⭐ (300 reviews)</p>
-        <button onclick="addToCart(this)">Add to Cart</button>
-      </div>
-
-      <div class="food-item" data-id="4" data-name="margherita Pizza" data-price="9">
-        <img src="images/margherita.jpg" alt="margherita Pizza">
-        <h4>Margherita Pizza</h4>
-        <p>Tsh 20000</p>
-        <p>⭐⭐⭐⭐⭐ (300 reviews)</p>
-        <button onclick="addToCart(this)">Add to Cart</button>
+      <div class="menu-item">
+        <img src="images/pasta.jpg" alt="Pasta">
+        <h3>Pasta</h3>
+        <p>Tsh 2000</p>
+        <button onclick="addToCart('Pasta')">Add to Cart</button>
       </div>
     </div>
-
-    <div class="menu-category">
-      <h3>Drinks 🥤</h3>
-      <div class="food-item" data-id="5" data-name="pomegranate" data-price="2">
-        <img src="images/pomegranate.jpg" alt="pomegranate">
-        <h4>pomegranate juice</h4>
-        <p>Tsh 2500</p>
-        <p>⭐⭐⭐⭐☆ (90 reviews)</p>
-        <button onclick="addToCart(this)">Add to Cart</button>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="images/pizza.jpg" alt="Pizza">
+        <h3>Pizza</h3>
+        <p>Tsh 1500</p>
+        <button onclick="addToCart('Pizza')">Add to Cart</button>
       </div>
-      <div class="food-item" data-id="6" data-name="Orange Juice" data-price="3">
-        <img src="images/orange.jpg" alt="Orange Juice">
-        <h4>Orange Juice</h4>
-        <p>Tsh 2500</p>
-        <p>⭐⭐⭐⭐⭐ (120 reviews)</p>
-        <button onclick="addToCart(this)">Add to Cart</button>
+      <div class="menu-item">
+        <img src="images/burger.jpg" alt="Burger">
+        <h3>Burger</h3>
+        <p>Tsh 17000</p>
+        <button onclick="addToCart('Burger')">Add to Cart</button>
       </div>
-
-      <div class="food-item" data-id="6" data-name="pineaple" data-price="3">
-        <img src="images/pineaple.jpg" alt="pineaple">
-        <h4>Pineaple Juice</h4>
-        <p>Tsh 2500</p>
-        <p>⭐⭐⭐⭐⭐ (120 reviews)</p>
-        <button onclick="addToCart(this)">Add to Cart</button>
+      <div class="menu-item">
+        <img src="images/pasta.jpg" alt="Pasta">
+        <h3>Pasta</h3>
+        <p>Tsh 2000</p>
+        <button onclick="addToCart('Pasta')">Add to Cart</button>
       </div>
-
-      <div class="food-item" data-id="6" data-name="watermelon" data-price="3">
-        <img src="images/watermelon.jpg" alt="watermelon">
-        <h4>watermelon juice</h4>
-        <p>Tsh 2500</p>
-        <p>⭐⭐⭐⭐⭐ (120 reviews)</p>
-        <button onclick="addToCart(this)">Add to Cart</button>
-      </div>
-
-      
     </div>
   </section>
 
-  <!-- Special Offers -->
-  <section class="offers">
-    <h2>🔥 Special Offers</h2>
-    <p>Buy 1 Pizza, Get 1 Drink FREE!</p>
-    <p>20% OFF on all Burgers every Friday!</p>
-    <button onclick="window.location.href='cart.html'">Order Now</button>
-  </section>
-
-  <script src="script.js"></script>
+  <footer>
+    <p class="footer-bottom">© 2026 DelishHub. All rights reserved.</p>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Orders - DelishHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">🍴 DelishHub</div>
+    <ul>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="backend/cart.php">Cart</a></li>
+      <li><a href="my_order.html">My Orders</a></li>
+      <li><a href="backend/logout.php">Logout</a></li>
+    </ul>
+  </nav>
+
+  <section class="orders">
+    <h2>My Orders</h2>
+    <table border="1" cellpadding="10">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Status</th>
+          <th>Date</th>
+          <th>Items</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Orders will be loaded dynamically from backend/my_orders.php -->
+      </tbody>
+    </table>
+  </section>
+
+  <script>
+    // Fetch orders from backend
+    fetch("backend/my_orders.php")
+      .then(res => res.json())
+      .then(data => {
+        const tbody = document.querySelector("tbody");
+        tbody.innerHTML = "";
+        data.forEach(order => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>${order.id}</td>
+            <td>${order.status}</td>
+            <td>${order.order_date}</td>
+            <td>${order.items}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      });
+  </script>
+</body>
+</html>

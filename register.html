@@ -2,49 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Customer Registration - Food Ordering System</title>
+  <title>Register - DelishHub</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Navigation -->
   <nav class="navbar">
+    <div class="logo">🍴 DelishHub</div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="menu.html">Menu</a></li>
-      <li><a href="cart.html">Cart</a></li>
+      <li><a href="backend/cart.php">Cart</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="register.html">Register</a></li>
       <li><a href="login.html">Login</a></li>
     </ul>
   </nav>
 
-  <!-- Registration Section -->
-  <section class="register">
-    <h2>Create Your Account</h2>
-    <form id="registerForm" method="POST" action="register.php" onsubmit="return validateRegister()">
-      <label>Username:</label>
-      <input type="text" id="Username" name="username" required>
-
-      <label>Email:</label>
-      <input type="email" id="Email" name="email" required>
-
-      <label>Password:</label>
-      <input type="password" id="Password" name="password" required>
-
-      <label>Confirm Password:</label>
-      <input type="password" id="ConfirmPassword" name="confirmPassword" required>
-
-      <button type="submit">Register</button>
-    </form>
-    <p id="Error" style="color:red;"></p>
-
-    <!-- Link to Login -->
-    <div class="already-registered">
-      <p>Already registered?</p>
-      <a href="login.html" class="login-link">Click here to login</a>
-    </div>
+  <section class="form-section">
+    <h2>Create Account</h2>
+    <form action="backend/register.php" method="POST" onsubmit="return validateRegisterForm()">
+  <label>Username:</label>
+  <input type="text" name="username" id="username" required>
+  <label>Email:</label>
+  <input type="email" name="email" id="email" required>
+  <label>Password:</label>
+  <input type="password" name="password" id="password" required>
+  <label>Confirm Password:</label>
+  <input type="password" id="confirmPassword" required>
+  <button type="submit">Register</button>
+</form>
+<div class="link"> <p>Already registered? <a href="login.html">Login here</a></p> </div>
   </section>
 
-  <script src="script.js"></script>
+  <footer>
+    <p class="footer-bottom">© 2026 DelishHub. All rights reserved.</p>
+  </footer>
 </body>
 </html>

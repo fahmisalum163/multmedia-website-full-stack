@@ -2,37 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Customer Login - Food Ordering System</title>
+  <title>Login - DelishHub</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Navigation -->
   <nav class="navbar">
+    <div class="logo">🍴 DelishHub</div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="menu.html">Menu</a></li>
-      <li><a href="cart.html">Cart</a></li>
+      <li><a href="backend/cart.php">Cart</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="register.html">Register</a></li>
       <li><a href="login.html">Login</a></li>
     </ul>
   </nav>
 
-  <!-- Login Section -->
-  <section class="login">
-    <h2>Customer Login</h2>
-    <form id="loginForm" method="POST" action="login.php" onsubmit="return validateLogin()">
-      <label>Email:</label>
-      <input type="email" id="loginEmail" name="email" required>
-
-      <label>Password:</label>
-      <input type="password" id="loginPassword" name="password" required>
-
-      <button type="submit">Login</button>
-    </form>
-    <p id="loginError" style="color:red;"></p>
+  <section class="form-section">
+    <h2>Login</h2>
+   <form action="backend/login.php" method="POST">
+  <input type="email" name="email" required>
+  <input type="password" name="password" required>
+  <button type="submit">Login</button>
+</form>
+<!-- Link ya Admin Login -->
+  <div class="link">
+   <p>Are you an Admin? <a href="backend/admin_login.php">Login here</a></p> </div>
   </section>
 
-  <script src="script.js"></script>
+  <footer>
+    <p class="footer-bottom">© 2026 DelishHub. All rights reserved.</p>
+  </footer>
 </body>
 </html>
